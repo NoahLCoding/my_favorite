@@ -2,7 +2,7 @@ body{
     text-align: center;
     font-family: "VT323", monospace;
     font-size: 22px;
-    background-image: url(1370592.jpeg);
+    background-image: url(img/1370592.jpeg);
     background-repeat:no-repeat;
     background-size: cover;
     color: white;
@@ -11,7 +11,7 @@ body{
 .container{
 
     background-color: rgba(0, 0, 0, .5);
-    max-width: 1000px;
+    max-width: 1200px;
     margin: auto;
     padding-top: 5px;
     border-radius: 20px;
@@ -60,4 +60,33 @@ a:hover{
     color: white;
     border: solid 1px white;
     background-color: black;
+}
+
+/* Gallery: three columns with gaps and responsive behavior */
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    padding: 20px;
+    max-width: 1100px;
+    margin: 20px auto 0 auto;
+}
+.gallery img{
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+}
+
+/* Make gallery responsive: stack on smaller screens */
+@media (max-width: 800px){
+    .gallery{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 480px){
+    .gallery{
+        grid-template-columns: 1fr;
+    }
 }
